@@ -1,0 +1,59 @@
+.settingsRow{
+    margin-left: 400px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.settingsRow h1 {
+    font-size: 48px;
+}
+
+.settingsRow h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.settingsRow p {
+    font-size: 16px;
+}
+
+.plan{
+    margin: 40px 0 60px 0;
+}
+
+.planButton{
+    border: 1px solid #2db97c;
+    background-color: #2db97c;
+    border-radius: 4px;
+}
+
+.loggedOut {
+    margin-left: 400px;
+    margin-top: 400px;
+}
+
+.loggedOutContainer{
+    width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loggedOutContainer img{
+    width: 50%;
+}
+
+.loggedOutContainer button{
+    border: 1px solid #2db97c;
+    background-color: #2db97c;
+    padding: 4px 16px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.loggedOutContainer h3{
+    padding-top: 32px;
+    padding-bottom: 16px;
+}

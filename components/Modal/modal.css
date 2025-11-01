@@ -1,0 +1,133 @@
+.modal {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+.modalContainer {
+    padding: 8px;
+    border: 1px solid white;
+    width: 400px;
+    max-width: 90%;
+    height: 525px;
+    margin: 64px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.forgotContainer {
+    height: 255px;
+}
+
+.signUpContainer {
+    height: 400px;
+}
+
+.closeButton {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close {
+    font-size: 28px;
+    padding-right: 16px;
+}
+
+.modalContainer h1 {
+    font-size: 20px;
+    color: #032b41;
+}
+
+.guestButton, .googleButton {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    border-radius: 5px;
+    width: 85%;
+}
+
+.guestButton p, .googleButton p {
+    font-size: 16px;
+    color: white;
+}
+
+.finalButton p {
+    font-size: 16px;
+}
+
+.guestButton {
+    border: 1px solid #3a579d;
+    background-color: #3a579d;
+    color: white;
+    padding: 8px;
+}
+
+.googleButton {
+    border: 1px solid #4285f4;
+    background-color: #4285f4;
+    color: white;
+    padding: 2px;
+}
+
+.googleButton img {
+    background-color: white;
+    width: 36px;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.emailInput, .passwordInput {
+    width: 85%;
+    padding: 8px;
+    border-radius: 5px;
+    color: gray;
+    border: 2px solid #bac8ce;
+    color: #394547;
+}
+
+.passwordInput {
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.passwordText {
+    padding: 0;
+}
+
+.finalButton {
+    border: 1px solid #2bd97c;
+    background-color: #2bd97c;
+    border-radius: 5px;
+    width: 85%;
+    padding: 8px;
+}
+
+.forgot {
+    color: #116be9;
+    font-size: 14px;
+}
+
+.signUpLink, .login {
+    color: #116be9;
+    font-size: 16px;
+}
+
+.closedEye, .openEye {
+    width: 16px;
+    height: 16px;
+}

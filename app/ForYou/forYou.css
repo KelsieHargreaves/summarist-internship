@@ -1,0 +1,124 @@
+.ForYouContainer {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.selectedBookContainer {
+    padding: 30px 20px;
+    width: 700px;
+    height: 200px;
+    border: 1px solid #fbefd6;
+    background-color: #fbefd6;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.selectedBookContainer p {
+    width: 33%;
+}
+
+.container {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.selected h2 {
+    margin: 40px 0 20px 0;
+}
+
+.runTimeImg {
+    padding: 4px;
+    margin-right: 4px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.bookImage {
+    width: 150px;
+}
+
+.bookLine {
+    border: 0.5px solid #032b41;
+}
+
+.runTime {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.selectedInfo p {
+    width: 150px;
+}
+
+.selectedInfo h3 {
+    margin-bottom: 16px;
+}
+
+.recommendedContainer, .suggestedContainer {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionDescription {
+    margin: 20px 0 40px 0;
+}
+
+.subscription {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
+    margin-bottom: 6px;
+}
+
+.subscriptionStatus {
+    border: 1px solid #032b41;
+    background-color: #032b41;
+    color: white;
+    border-radius: 10px;
+    padding: 0 4px;
+}
+
+.bookContainer {
+    width: 150px;
+    cursor: pointer;
+}
+
+.bookTitle {
+    font-size: 16px;
+}
+
+.bookAuthor {
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+.bookDescription {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.bookTime{
+    display: flex;
+    gap: 8px;
+}
+
+.clock, .star {
+    width: 14px;
+}
+
+.TimeStar {
+    font-size: 14px;
+}
+
+.suggested {
+    margin-bottom: 40px;
+}

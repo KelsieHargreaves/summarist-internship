@@ -1,0 +1,160 @@
+.planContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.planRow{
+    width: 1024px;
+
+}
+
+.planHeader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #032d41;
+    border-bottom-right-radius: 256px;
+    border-bottom-left-radius: 256px;
+}
+
+.planHeader h1{
+    text-align: center;
+    width: 50%;
+    font-size: 48px;
+    color: white;
+    margin-top: 50px;
+}
+
+.planHeader h3{
+    margin: 40px 0;
+    color: white;
+}
+
+.planHeader img {
+    width: 350px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 180px 180px 0 0;
+}
+
+
+.planDescriptions{
+    display: flex;
+    gap: 40px;
+    margin: 75px 0;
+}
+
+.planDescription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    text-align: center;
+}
+
+.planDescription p{
+    font-size: 20px;
+    padding-top: 8px;
+}
+
+.planOptions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.planOptions h1{
+    padding-bottom: 28px;
+}
+
+.planOption{
+    position: relative;
+    border: 5px solid #9ba2a5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 32px;
+    width: 80%;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.planOption:hover {
+    border-color: #032d4141;
+}
+
+.planOption.selected {
+    border-color: #032d41;
+    background-color: #032d4141;
+}
+
+.circle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #032d41;
+  border-radius: 50%;
+  transition: border-color 0.2s;
+}
+
+.planOption.selected .circle {
+  border-color: #032d41;
+  background-color: #032d41;
+  box-shadow: 0 0 0 3px #9ba2a5;
+}
+
+.planOption h2{
+    padding: 8px 0;
+    font-size: 40px;
+}
+
+.planOption p{
+    color: #9ba2a5;
+}
+
+.or {
+    margin: 32px 0;
+}
+
+.purchasePlan button{
+    border: 1px solid #2bd97c;
+    background-color: #2bd97c;
+    padding: 8px 48px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 12px 0;
+}
+
+.purchasePlan p{
+    color: #9ba2a5;
+    font-size: 12px;
+
+}
+
+.planFaqs{
+    margin: 32px 0;
+}
+
+.planFaq {
+    padding: 16px 0;
+}
+
+.planFaq h1 {
+    padding-bottom: 8px;
+}
+
+.caret {
+  transition: transform 0.3s ease;
+}
+
+.caret.open {
+  transform: rotate(90deg);
+}
