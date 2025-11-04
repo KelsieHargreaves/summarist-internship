@@ -122,3 +122,65 @@
 .suggested {
     margin-bottom: 40px;
 }
+
+@media (max-width: 1225px) {
+    .recommendedContainer, .suggestedContainer {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .selectedBookContainer {
+        width: 80%;
+    }
+
+    .container {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container, .ForYouContainer{
+        margin-left: 20px;
+    }
+
+    .selectedBookContainer{
+        align-items: center;
+    }
+
+    .selectedBookContainer p{
+        font-size: 12px;
+    }
+
+    .selectedBookContainer img{
+        width: 25%
+
+    }
+
+    .bookLine {
+        display: none;
+    }
+
+    .selectedInfo {
+        margin-left: 20px;
+        width: 25%;
+    }
+
+    .selectedInfo h3{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .selectedBookContainer {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .selectedInfo {
+       display: none;
+    }
+}

@@ -59,6 +59,7 @@
 .addToLibrary {
     font-size: 18px;
     color: blue;
+    cursor: no-drop;
 }
 
 .description{
@@ -187,4 +188,107 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media (max-width: 1560px){
+    .play {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 1275px) {
+    .play {
+        width: 60%;
+    }
+
+    .bookPlayRow h1{
+        text-align: center;
+    }
+
+    .book{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-left: 150px;
+        width: 80%;
+    }
+
+    .titleAndAuthor, .timeBar {
+        width: 200px;
+    }
+
+    .playButtons {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .bookPlayPage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book, .play{
+        margin-left: 50px;
+    }
+
+    .bookPlayRow h1{
+        font-size: 24px;
+    }
+
+    .bookPlayRow p{
+        font-size: 14px;
+        margin-top: 16px
+    }
+
+    .bookInformation {
+        width: 90%;
+    }
+
+    .insideBookImage {
+        width: 100%;
+    }
+
+
+    .titleAndAuthor, .timeBar, .playBook, .playInfo {
+        display: none;
+    }
+
+    .playBar {
+        padding: 16px 20px;
+        width: 100%;
+
+    }
+
+    .playButtons {
+        gap: 40px;
+        left: 35%;
+    }
+}
+
+@media (max-width: 375px) {
+    .bookInformation h1{
+        font-size: 24px;
+        text-align: center;
+    }
+    .bookInformation h2{
+        font-size: 16px;
+    }
+    .bookInformation h3{
+        font-size: 16px;
+    }
+
+    .bookInformation p {
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .play p{
+        text-align: center;
+    }
 }

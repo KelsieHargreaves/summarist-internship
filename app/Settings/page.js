@@ -11,23 +11,14 @@ import SignUp from "@/components/Modal/signUpModal";
 import { auth } from "@/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 const Settings = () => {
+  const { data: session, status } = useSession();
   const { openModal, showModal, hideModal, isSubscribed, isGuest } = useModal();
-  const [userEmail, setUserEmail] = useState("");
 
-  const isLoggedIn = isSubscribed || isGuest || userEmail;
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUserEmail(user.email);
-      } else {
-        setUserEmail("");
-      }
-    });
-    return () => unsubscribe();
-  }, []);
+  const isLoggedIn = status === "authenticated" || isGuest;
+  const email = session?.user?.email || "Guest";
 
   return (
     <div>
@@ -78,13 +69,13 @@ const Settings = () => {
             <br />
             <div className="userInfo">
               <h3>Email</h3>
-              <p>{userEmail || "Not signed in"}</p>
+              <p>{email || "Guest"}</p>
             </div>
           </div>
         ) : (
           <div className="loggedOut">
+            <h1>Settings</h1>
             <div className="loggedOutContainer container">
-              <h1>Settings</h1>
               <img src="/login.png" />
               <h2>Log in to your account to see your details</h2>
               <button onClick={() => showModal("login")}>Login</button>

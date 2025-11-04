@@ -447,102 +447,6 @@ button:disabled {
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
-  .landing__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 540px;
-    margin: 0 auto;
-  }
-
-  .landing__image--mask {
-    display: none;
-  }
-
-  .landing__content__title {
-    font-size: 24px;
-  }
-
-  .features__wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .statistics__wrapper {
-    flex-direction: column;
-    gap: 32px;
-    margin-bottom: 32px;
-  }
-
-  .statistics__heading {
-    font-size: 24px;
-  }
-
-  .footer__top--wrapper {
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  .numbers__wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .statistics__content--details-second {
-    order: 1;
-  }
-
-  .statistics__content--header-second {
-    align-items: flex-start;
-  }
-
-  .statistics__data--title {
-    font-size: 16px;
-  }
-
-  .section__title {
-    font-size: 24px;
-  }
-
-  .features__title {
-    font-size: 20px;
-  }
-
-  .features__sub--title {
-    font-size: 14px;
-  }
-
-  .features__icon svg {
-    width: 48px;
-    height: 48px;
-  }
-
-  .review__body {
-    font-size: 14px;
-  }
-
-  .numbers__wrapper {
-    gap: 24px;
-  }
-
-  .numbers__title {
-    font-size: 32px;
-  }
-
-  .numbers__sub--title {
-    font-size: 14px;
-  }
-
-  .remove--tablet {
-    display: none;
-  }
-}
-
-@media (max-width: 576px) {
-  .nav__list--mobile {
-    display: none;
-  }
-}
 
 #SideBar {
   position: fixed;
@@ -642,3 +546,157 @@ input {
     transform: rotate(360deg);
   }
 }
+
+  @media (max-width: 768px) {
+    .landing__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+  
+    .landing__image--mask {
+      display: none;
+    }
+  
+    .landing__content__title {
+      font-size: 24px;
+    }
+  
+    .features__wrapper {
+      grid-template-columns: 1fr;
+    }
+  
+    .statistics__wrapper {
+      flex-direction: column;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+  
+    .statistics__heading {
+      font-size: 24px;
+    }
+  
+    .footer__top--wrapper {
+      gap: 32px;
+    }
+  
+    .numbers__wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .statistics__content--header, .statistics__content--header-second{
+      align-items: center;
+    }
+  
+    .statistics__content--details, .statistics__content--details-second {
+      order: 1;
+      align-items: center;
+    }
+  
+    .statistics__data--title {
+      font-size: 16px;
+    }
+  
+    .section__title {
+      font-size: 24px;
+    }
+  
+    .features__title {
+      font-size: 20px;
+    }
+  
+    .features__sub--title {
+      font-size: 14px;
+    }
+  
+    .features__icon svg {
+      width: 48px;
+      height: 48px;
+    }
+  
+    .review__body {
+      font-size: 14px;
+    }
+  
+    .numbers__wrapper {
+      gap: 24px;
+    }
+  
+    .numbers__title {
+      font-size: 32px;
+    }
+  
+    .numbers__sub--title {
+      font-size: 14px;
+    }
+  
+    .remove--tablet {
+      display: none;
+    }
+
+    #SideBar {
+      display: none;
+    }
+
+    .Search {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+    }
+
+    .SearchWrapper{
+      width: 100%;
+      margin: 0;
+    }
+
+    .menuButton {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: white;
+      margin-left: 8px;
+    }
+
+    .dropdownMenu {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #032b41;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      padding: 8px 0;
+      width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+
+    .dropdownMenu a {
+      padding: 10px 16px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdownMenu a:hover {
+      background-color: #054b66;
+    }
+
+  }
+  
+  @media (max-width: 576px) {
+    .nav__list--mobile {
+      display: none;
+    }
+
+    .footer__top--wrapper{
+      flex-direction: column;
+      align-items: center;
+    }
+
+   
+  }
+
+  

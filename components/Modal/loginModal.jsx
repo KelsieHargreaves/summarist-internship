@@ -9,7 +9,6 @@ import { auth } from "@/firebase";
 import { usePathname, useRouter } from "next/navigation";
 import { useModal } from "@/Providers";
 
-
 const Login = ({ onClose, onForgot, onSignUp }) => {
   const { data: session, status } = useSession();
   const [email, setEmail] = useState("");
@@ -17,34 +16,34 @@ const Login = ({ onClose, onForgot, onSignUp }) => {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
-  const router = useRouter()
-  const pathname = usePathname()
+  const router = useRouter();
+  const pathname = usePathname();
 
-  const { loginAsGuest } = useModal()
+  const { loginAsGuest } = useModal();
 
   const handleGuestLogin = () => {
-    loginAsGuest()
-    onClose()
+    loginAsGuest();
+    onClose();
 
     if (pathname === "/") {
-      router.push("/ForYou")
+      router.push("/ForYou");
     }
-  }
+  };
 
   const handleEmailLogin = async () => {
-  const res = await signIn("credentials", {
-    redirect: false,
-    email,
-    password,
-  });
+    const res = await signIn("credentials", {
+      redirect: false,
+      email,
+      password,
+    });
 
-  if (!res.error) {
-    onClose();
-    if (pathname === "/") router.push("/ForYou");
-  } else {
-    alert(res.error);
-  }
-};
+    if (!res.error) {
+      onClose();
+      if (pathname === "/") router.push("/ForYou");
+    } else {
+      alert(res.error);
+    }
+  };
 
   useEffect(() => {
     if (status === "authenticated") {
@@ -53,7 +52,11 @@ const Login = ({ onClose, onForgot, onSignUp }) => {
   }, [status, onClose]);
 
   const handleGoogleLogin = async () => {
-    await signIn("google");
+    if (pathname === "/") {
+      await signIn("google", {callbackUrl: "/ForYou"})
+    } else {
+      await signIn("google")
+    }
   };
 
   return (
@@ -86,7 +89,7 @@ const Login = ({ onClose, onForgot, onSignUp }) => {
         </button>
         <p>or</p>
         <input
-        className="emailInput"
+          className="emailInput"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="text"

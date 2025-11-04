@@ -14,6 +14,7 @@ export default function Providers({ children, session }) {
   const [openModal, setOpenModal] = useState(null);
   const [isGuest, setIsGuest] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [userEmail, setUserEmail] = useState("");
 
   const showModal = (type) => setOpenModal(type);
   const hideModal = () => setOpenModal(null);
@@ -27,6 +28,7 @@ export default function Providers({ children, session }) {
   };
 
   const logout = () => {
+    setUserEmail("")
     setIsGuest(false)
     setIsSubscribed(false)
   }
@@ -35,6 +37,7 @@ export default function Providers({ children, session }) {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
         try {
+          setUserEmail(user.email)
           const userRef = doc(db, "users", user.uid);
           const userSnap = await getDoc(userRef);
           if (userSnap.exists() && userSnap.data().isSubscriber) {
@@ -46,6 +49,7 @@ export default function Providers({ children, session }) {
           console.error("Error checking subscription", error);
         }
       } else {
+        setUserEmail("")
         setIsSubscribed(false);
       }
     });

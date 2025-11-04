@@ -1,0 +1,40 @@
+.libraryContainer{
+   position: absolute;
+   left: 200px;
+   width: calc(100% - 200px);
+}
+
+.librarySaved h1{
+    font-size: 32px;
+}
+
+.savedBooks{
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    align-items: center;
+}
+
+.savedBooks h3{
+    width: 30%;
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.savedBooks img{
+    width: 30%;
+    margin-top: 32px;
+}
+
+@media (max-width: 768px) {
+    .libraryContainer{
+        left: 0;
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .savedBooks h3, .savedBooks img{
+        width: 80%;
+    }
+}
