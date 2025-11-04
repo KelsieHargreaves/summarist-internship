@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import settings from "./settings.css";
+import settings from ".//settings.css";
 import SideBar from "@/components/SideBarNav";
 import SearchBar from "@/components/SearchBar";
 import { useModal } from "@/Providers";
