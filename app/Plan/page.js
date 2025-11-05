@@ -16,8 +16,8 @@ const Plan = () => {
   const router = useRouter()
   const { subscribe } = useModal()
 
-  const handleSubscribe = () => {
-    subscribe()
+  const handleSubscribe = async () => {
+    await subscribe()
     router.push("/ForYou")
   }
 
