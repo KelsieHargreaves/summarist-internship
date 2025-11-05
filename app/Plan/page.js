@@ -16,9 +16,10 @@ const Plan = () => {
   const router = useRouter()
   const { subscribe } = useModal()
 
-  const handleSubscribe = async () => {
-    await subscribe()
-    router.push("/ForYou")
+  const handleSubscribe = () => {
+    subscribe().then(() => {
+      router.push("/ForYou")
+    })
   }
 
   return (
@@ -202,7 +203,7 @@ const Plan = () => {
                   alignItems: "center",
                 }}
               >
-                Can I cancel during my trial or subscruption?{" "}
+                Can I cancel during my trial or subscription?{" "}
                 <span className={`caret ${open4 ? "open" : ""}`}>▸</span>
               </h1>
               {open4 && (
