@@ -17,9 +17,8 @@ const Plan = () => {
   const { subscribe } = useModal()
 
   const handleSubscribe = () => {
-    subscribe().then(() => {
-      router.push("/ForYou")
-    })
+    subscribe(true)
+    router.push("/ForYou")
   }
 
   return (

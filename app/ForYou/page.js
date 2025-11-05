@@ -21,6 +21,16 @@ const ForYou = ({ audioLink }) => {
   const [loading, setLoading] = useState(true);
   const { data: session } = useSession();
 
+    const [hydrated, setHydrated] = useState(false);
+  
+    useEffect(() => {
+      setHydrated(true);
+    }, []);
+  
+    if (!hydrated) {
+      return null;
+    }
+
   const { openModal, showModal, hideModal, isSubscribed } = useModal();
 
   const fetchBooksByStatus = async (status) => {

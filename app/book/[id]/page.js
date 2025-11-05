@@ -19,6 +19,15 @@ export default function Book({ params }) {
   const { data: session } = useSession();
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
+    const [hydrated, setHydrated] = useState(false);
+  
+    useEffect(() => {
+      setHydrated(true);
+    }, []);
+  
+    if (!hydrated) {
+      return null;
+    }
 
   const { openModal, showModal, hideModal, isSubscribed } = useModal();
 

@@ -14,6 +14,17 @@ import Link from "next/link";
 import { useSession } from "next-auth/react";
 
 const Settings = () => {
+
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  if (!hydrated) {
+    return null;
+  }
+
   const { data: session, status } = useSession();
   const { openModal, showModal, hideModal, isSubscribed, isGuest } = useModal();
 
